@@ -25,7 +25,7 @@ g++ -std=c++11 mlp.cpp -o mlp
 
 Notice that I only make a "Single output" MLP, but it can handle std::vector<double> of any size, if you need it. As you can notice, there's still no "Test" function, so neither the Epoch Hyperparameter, the MLP generates a Cross Entropy Error for each training (observation in the data). Of course, after all trainings, you can simply make a Feed Forward Propagation with some of your Test Inputs.
 
-./mlp {TOPOLOGY} INT_LEARNING_RATE STRING
+./mlp {TOPOLOGY} INT_LEARNING_RATE STRING_FileName int_ClassificationPossibleValues
 
 Here's an example:
 
