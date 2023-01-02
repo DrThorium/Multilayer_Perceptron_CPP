@@ -39,7 +39,7 @@ namespace MLP{
         void updateBiases();
     public:
         explicit MultilayerPerceptron(std::vector<int> topology);
-        void trainMLP(std::vector<std::pair<std::vector<double>, std::vector<double>>> train_);
+        void trainMLP(std::vector<std::pair<std::vector<double>, std::vector<double>>> train_, double learning_rate);
     };
 }
 

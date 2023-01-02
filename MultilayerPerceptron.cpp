@@ -76,7 +76,8 @@ void MLP::MultilayerPerceptron::forwardPropagation(const std::vector<double> &in
     output_layer_.activations_ = output_layer_.z_vectors_.unaryExpr(sigmoid);
 }
 
-void MLP::MultilayerPerceptron::trainMLP(std::vector<std::pair<std::vector<double>, std::vector<double>>> train_) {
+void MLP::MultilayerPerceptron::trainMLP(std::vector<std::pair<std::vector<double>, std::vector<double>>> train_, double learning_rate) {
+    learning_rate_ = learning_rate;
     setRandom();
     for (int i = 0; i < train_.size(); i++) {
         Eigen::VectorXd actual_output;
