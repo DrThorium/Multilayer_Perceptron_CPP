@@ -22,7 +22,14 @@ To compile the code, use the following command:
 g++ -std=c++11 mlp.cpp -o mlp
 
 ## To run the code, use the following command:
-(Notice that I only make a "Single output" MLP, but it can handle std::vector<double> of any size, if you need it).
-As you can notice, there's still no "Test" function, so neither the Epoch Hyperparameter, the MLP generate a Cross Entropy Error for each train (Observation in the data).
+
+Notice that I only make a "Single output" MLP, but it can handle std::vector<double> of any size, if you need it. As you can notice, there's still no "Test" function, so neither the Epoch Hyperparameter, the MLP generates a Cross Entropy Error for each training (observation in the data). Of course, after all trainings, you can simply make a Feed Forward Propagation with some of your Test Inputs.
 
 ./mlp {TOPOLOGY} INT_LEARNING_RATE STRING
+
+Here's an example:
+
+./mlp 16,16,16,23,42 0.998421 Red_wine.csv 10
+
+This example executes a training along all the red_wine.csv with a 0.998421 learning rate, with 5 hidden layers of Neuron Sizes of 16,16,16,23,42 and prepares an output of classification for 10 possible values.
+(Note: The MLP is fitted for classification only, but can do a regression with values in the range of 0.0-1.0, which is the activation value of the output neurons).
