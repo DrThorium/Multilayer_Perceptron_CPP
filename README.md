@@ -33,3 +33,5 @@ Here's an example:
 
 This example executes a training along all the red_wine.csv with a 0.998421 learning rate, with 5 hidden layers of Neuron Sizes of 16,16,16,23,42 and prepares an output of classification for 10 possible values.
 (Note: The MLP is fitted for classification only, but can do a regression with values in the range of 0.0-1.0, which is the activation value of the output neurons).
+
+ <img width="270" alt="image" src="https://user-images.githubusercontent.com/119984041/210188475-c2a3a22b-3a52-4ac6-8aac-2e94ddf033bb.png">
